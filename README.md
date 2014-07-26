@@ -6,9 +6,10 @@ Getting &amp; Cleaning Data Course Project
 
 ### Running the script
   - Clone this repository
-  - Here are the data for the project: [getdata_projectfiles_UCI HAR Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+  - Get the project zip containing the Data and Reference files: [getdata_projectfiles_UCI HAR Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
   - Copy and Extract to a location on your computer where you desire
   - Change current directory to the `UCI HAR Dataset` folder.
+  - Set r working directory. 
   - Run `Rscript <path to>/run_analysis.R`
   - The two tidy datasets will be created in the current directory as:
       - Master_DataSet_Subset.txt
