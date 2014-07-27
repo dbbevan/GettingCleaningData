@@ -82,8 +82,10 @@ Below is a sample excerpt to give a sense of how the data looks when checked.
 
 
 
+Appendix
 
-As a sidenote... the following are a list of the 66 features (those that cover mean and std dev.) extracted from the master features of 561
+## 66 Features ... these show up as column labels for the measurements they are associated with... 
+The following are a list of the 66 features (those that cover mean and std dev.) extracted from the master features of 561
 [1] "tbodyacc-mean-x"           "tbodyacc-mean-y"           "tbodyacc-mean-z"           "tbodyacc-std-x"            "tbodyacc-std-y"           
  [6] "tbodyacc-std-z"            "tgravityacc-mean-x"        "tgravityacc-mean-y"        "tgravityacc-mean-z"        "tgravityacc-std-x"        
 [11] "tgravityacc-std-y"         "tgravityacc-std-z"         "tbodyaccjerk-mean-x"       "tbodyaccjerk-mean-y"       "tbodyaccjerk-mean-z"      
