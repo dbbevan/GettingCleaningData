@@ -14,11 +14,11 @@ Getting &amp; Cleaning Data Course Project
   - The two tidy datasets will be created in the current directory as:
       - Master_DataSet_Subset.txt
       - Master_DataSet_Subset_with_Avgs_by_Activity_by_Participant.txt
+      note: The resulting outputted data sets have column listed as Participant vs. Subject. Participant and Subject are the same. I preferred referring to subjects as participants.  
   - Code book for the tidy dataset is available [here](CodeBook.md)
 
 ### Additional Notes
 
-- The resulting outputted data sets have columns listed as Participant vs. Subject. Participant and Subject are the same.  
 - The training and test data are available in folders named `test` and `train` respectively.
 - Data Set files are as follows:
     - Measurements are present in `X_<dataset>.txt` file
