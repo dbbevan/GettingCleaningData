@@ -8,10 +8,11 @@ Getting &amp; Cleaning Data Course Project
   - Clone this repository
   - Get the project zip containing the Data and Reference files: [getdata_projectfiles_UCI HAR Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
   - Copy and Extract to a location on your computer where you desire
-  - Change current directory to the `UCI HAR Dataset` folder.
-  - Set r working directory. 
+  - Change current directory to the `UCI HAR Dataset` folder that was created when unzipping the file.
+  - Set r working directory to the  UCI HAR Dataset folder that was created.  
+  - Place run_analysis.R` in the UCI HAR Dataset` folder. 
   - Run `Rscript <path to>/run_analysis.R`
-  - The two tidy datasets will be created in the current directory as:
+  - Two tidy datasets will be created in the current directory as:
       - Master_DataSet_Subset.txt
       - Master_DataSet_Subset_with_Avgs_by_Activity_by_Participant.txt
       note: The resulting outputted data sets have column listed as Participant vs. Subject. Participant and Subject are the same. I preferred referring to subjects as participants.  
