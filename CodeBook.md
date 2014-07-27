@@ -46,27 +46,28 @@ Master_DataSet_Subset_with_Avgs_by_Activity_by_Participant.txt - This file conta
 
  This R script called run_analysis.R does the following:
 ###       1.Merges the training and the test sets to create one data set.
-            1) My first action is to merge training and test datasets  for each x, y and subject dataset into three respecive files sets.  X_DataSet, Y_DataSet, Subject_DataSet
+            My first action is to merge training and test datasets  for each x, y and subject dataset 
+            into three respecive files sets.  X_DataSet, Y_DataSet, Subject_DataSet
 ###     2.Extracts only the measurements on the mean and standard deviation for each measurement. 
-            2) In this step I filter out columns in my X_DataSet to only contain those for 
-            Create a data.frame subset with only columns of mean and standard measurements
-            Add Header Column Labels (clean Headers up... get rid of parentheses, etc... while updating)
-            Write some validation test code to verify it looks good
+            In this step I filter out columns in my X_DataSet to only contain those for mean and std measurements
+            -Create a data.frame subset with only columns of mean and standard measurements
+            -Add Header Column Labels (clean Headers up... get rid of parentheses, etc... while updating)
+            -Write some validation test code to verify it looks good
 ###     3.Uses descriptive activity names to name the activities in the data set
-            3)Get the activity lables from activity_labels.txt file 
-            Make labels suitable and standardized by setting to lowercase, removing underscores
-            Update Y_DataSet to meaning descriptive activity names for each observation
-            Set Y_DataSet single column header name to activity
+            Get the activity lables from activity_labels.txt file 
+            -Make labels suitable and standardized by setting to lowercase, removing underscores
+            -Update Y_DataSet to meaning descriptive activity names for each observation
+            -Set Y_DataSet single column header name to activity
             
 ###     4.Appropriately labels the data set with descriptive variable names. 
-            4) Sub-step 4a - Add meaningful label to Subject data set  
-            Sub-step 4b - Bring this bad boy together into a single master file Master_DataSet_Subset.txt
-            TEST SCRIPT: One last validation check that all columns have descriptive variable names... s...
-             Sub-step 4c - Save this single master file to the harddrive for future analysis
+            -Sub-step 4a - Add meaningful label to Subject data set  
+            -Sub-step 4b - Bring this bad boy together into a single master file Master_DataSet_Subset.txt
+            -TEST SCRIPT: One last validation check that all columns have descriptive variable names... s...
+            -Sub-step 4c - Save this single master file to the harddrive for future analysis
 ###     5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-            5) I use the Master_DataSet_Subset I created in the previous step
-            I calculate the number of Participants(30) times the observations (6) this gives me 180 expected rows across 66 columns that will be need in the final report output. 
-            I create a for loop that iterates over Master_DataSet_Subset for each participants set of records for each of their respective activites... as we iterate over the data set I update/build out my new data.frame that will contain 68 columns...the first column contains Participant/Subject IDs, Column 2 contains the activites prformed and the remaining 66 columns contain the rolled up colMean() calculates per each Participant -> Activity... Each Particpant will have 6 rows listing a unique activity rollup they performed.
+            -I use the Master_DataSet_Subset I created in the previous step
+            -I calculate the number of Participants(30) times the observations (6) this gives me 180 expected rows across 66 columns that will be need in the final report output. 
+            - I create a for loop that iterates over Master_DataSet_Subset for each participants set of records for each of their respective activites... as we iterate over the data set I update/build out my new data.frame that will contain 68 columns...the first column contains Participant/Subject IDs, Column 2 contains the activites prformed and the remaining 66 columns contain the rolled up colMean() calculates per each Participant -> Activity... Each Particpant will have 6 rows listing a unique activity rollup they performed.
             
 Below is a sample excerpt to give a sense of how the data looks when checked.
             
