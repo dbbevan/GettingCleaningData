@@ -31,7 +31,7 @@ activity_labels.txt - Contains list of activities participants performed...
 
 features.txt (features_info.txt contains descriptions of each column feature within the training and test dataset files)
   - Contains complete list of features associated with the 561 measurements observation... 
-  - for this analysis our focus was only on mean and standard deviation of which only 66 features were used.
+  - for this analysis our focus was only on mean and standard deviation of which only 66 features were used. See list of 66 features by name at the bottom of this codebook.
 
 subject_test.txt contains unique instances of a subject(participant) associated to a single descrete activity
 X_test.txt - This files contains observations with their corresponding 561 measures respectively 
