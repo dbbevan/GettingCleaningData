@@ -44,26 +44,26 @@ Master_DataSet_Subset_with_Avgs_by_Activity_by_Participant.txt - This file conta
 
 ## transformations or work that you performed to clean up the data 
 
-# This R script called run_analysis.R does the following:
-#       1.Merges the training and the test sets to create one data set.
+ This R script called run_analysis.R does the following:
+###       1.Merges the training and the test sets to create one data set.
             1) My first action is to merge training and test datasets  for each x, y and subject dataset into three respecive files sets.  X_DataSet, Y_DataSet, Subject_DataSet
-#       2.Extracts only the measurements on the mean and standard deviation for each measurement. 
+###     2.Extracts only the measurements on the mean and standard deviation for each measurement. 
             2) In this step I filter out columns in my X_DataSet to only contain those for 
             Create a data.frame subset with only columns of mean and standard measurements
             Add Header Column Labels (clean Headers up... get rid of parentheses, etc... while updating)
             Write some validation test code to verify it looks good
-#       3.Uses descriptive activity names to name the activities in the data set
+###     3.Uses descriptive activity names to name the activities in the data set
             3)Get the activity lables from activity_labels.txt file 
             Make labels suitable and standardized by setting to lowercase, removing underscores
             Update Y_DataSet to meaning descriptive activity names for each observation
             Set Y_DataSet single column header name to activity
             
-#       4.Appropriately labels the data set with descriptive variable names. 
+###     4.Appropriately labels the data set with descriptive variable names. 
             4) Sub-step 4a - Add meaningful label to Subject data set  
             Sub-step 4b - Bring this bad boy together into a single master file Master_DataSet_Subset.txt
             TEST SCRIPT: One last validation check that all columns have descriptive variable names... s...
              Sub-step 4c - Save this single master file to the harddrive for future analysis
-#       5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+###     5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
             5) I use the Master_DataSet_Subset I created in the previous step
             I calculate the number of Participants(30) times the observations (6) this gives me 180 expected rows across 66 columns that will be need in the final report output. 
             I create a for loop that iterates over Master_DataSet_Subset for each participants set of records for each of their respective activites... as we iterate over the data set I update/build out my new data.frame that will contain 68 columns...the first column contains Participant/Subject IDs, Column 2 contains the activites prformed and the remaining 66 columns contain the rolled up colMean() calculates per each Participant -> Activity... Each Particpant will have 6 rows listing a unique activity rollup they performed.
@@ -75,3 +75,22 @@ Master_DataSet_Subset_with_Avgs_by_Activity_by_Participant.txt - This file conta
             1              Standing
 
 `````
+
+
+
+As a sidenote... the following are a list of the 66 features (those that cover mean and std dev.) extracted from the master features of 561
+[1] "tbodyacc-mean-x"           "tbodyacc-mean-y"           "tbodyacc-mean-z"           "tbodyacc-std-x"            "tbodyacc-std-y"           
+ [6] "tbodyacc-std-z"            "tgravityacc-mean-x"        "tgravityacc-mean-y"        "tgravityacc-mean-z"        "tgravityacc-std-x"        
+[11] "tgravityacc-std-y"         "tgravityacc-std-z"         "tbodyaccjerk-mean-x"       "tbodyaccjerk-mean-y"       "tbodyaccjerk-mean-z"      
+[16] "tbodyaccjerk-std-x"        "tbodyaccjerk-std-y"        "tbodyaccjerk-std-z"        "tbodygyro-mean-x"          "tbodygyro-mean-y"         
+[21] "tbodygyro-mean-z"          "tbodygyro-std-x"           "tbodygyro-std-y"           "tbodygyro-std-z"           "tbodygyrojerk-mean-x"     
+[26] "tbodygyrojerk-mean-y"      "tbodygyrojerk-mean-z"      "tbodygyrojerk-std-x"       "tbodygyrojerk-std-y"       "tbodygyrojerk-std-z"      
+[31] "tbodyaccmag-mean"          "tbodyaccmag-std"           "tgravityaccmag-mean"       "tgravityaccmag-std"        "tbodyaccjerkmag-mean"     
+[36] "tbodyaccjerkmag-std"       "tbodygyromag-mean"         "tbodygyromag-std"          "tbodygyrojerkmag-mean"     "tbodygyrojerkmag-std"     
+[41] "fbodyacc-mean-x"           "fbodyacc-mean-y"           "fbodyacc-mean-z"           "fbodyacc-std-x"            "fbodyacc-std-y"           
+[46] "fbodyacc-std-z"            "fbodyaccjerk-mean-x"       "fbodyaccjerk-mean-y"       "fbodyaccjerk-mean-z"       "fbodyaccjerk-std-x"       
+[51] "fbodyaccjerk-std-y"        "fbodyaccjerk-std-z"        "fbodygyro-mean-x"          "fbodygyro-mean-y"          "fbodygyro-mean-z"         
+[56] "fbodygyro-std-x"           "fbodygyro-std-y"           "fbodygyro-std-z"           "fbodyaccmag-mean"          "fbodyaccmag-std"          
+[61] "fbodybodyaccjerkmag-mean"  "fbodybodyaccjerkmag-std"   "fbodybodygyromag-mean"     "fbodybodygyromag-std"      "fbodybodygyrojerkmag-mean"
+[66] "fbodybodygyrojerkmag-std" 
+
